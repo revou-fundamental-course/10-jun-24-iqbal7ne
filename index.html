@@ -3,7 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Iqbal Konversi Suhu</title>
+    <!-- ini link CSS -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Website Konversi Suhu</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <p>Masukkan suhu derajat Celcius (&deg;C)</p>
+
+      <!-- section header -->
+      <section>
+        <header>
+          <h3 id="celcius-info">
+            <span class="c-span">Celcius (&deg;C)</span>
+          </h3>
+          <h3 id="fahrenheit-info" style="display: none">
+            <span class="f-span">Fahrenheit (&deg;F)</span>
+          </h3>
+        </header>
+      </section>
+
+      <!-- Section Input -->
+      <section>
+        <label for="input">Input</label>
+        <input type="number" id="input" />
+        <!-- Section Calculate -->
+        <label for="result">Output</label>
+        <input type="number" id="result" />
+      </section>
+      <br />
+      <!-- Section Button -->
+      <section>
+        <button onclick="konversi()">Konversi</button>
+        <button onclick="reset()">Reset</button>
+        <button onclick="reverse()">Reverse</button>
+      </section>
+
+      <!-- Section Formula/info -->
+      <section id="celcius-info2">
+        <header>
+          <h1>
+            Cara Konversi Dari <span class="c-span">Celcius (&deg;C)</span> ke
+            <span class="f-span">Fahrenheit (&deg;F)</span>
+          </h1>
+        </header>
+
+        <hr />
+        <section>
+          <p>
+            Suhu <span class="style-info">S</span> dalam derajat
+            <span class="c-span">Celcius (&deg;C)</span>
+            menjadi suhu
+            <span class="style-info">S</span> dalam derajat
+            <span class="f-span">Fahrenheit (&deg;F)</span>
+          </p>
+          <p>
+            <span class="style-info">S</span><sub>(&deg;F)</sub> = (<span
+              class="style-info"
+              >S</span
+            ><sub>(&deg;C)</sub> X 9/5) + 32
+          </p>
+        </section>
+      </section>
+      <section id="fahrenheit-info2" style="display: none">
+        <header>
+          <h1>
+            Cara Konversi Dari
+            <span class="f-span">Fahrenheit (&deg;F)</span> ke
+            <span class="c-span">Celcius (&deg;C)</span>
+          </h1>
+        </header>
+
+        <hr />
+        <section>
+          <p>
+            Suhu <span class="style-info">S</span> dalam derajat
+            <span class="f-span">Fahrenheit (&deg;F)</span> menjadi suhu
+            <span class="style-info">S</span> dalam derajat
+            <span class="c-span">Celcius (&deg;C)</span>
+          </p>
+          <p>
+            <span class="style-info">S</span><sub>(&deg;c)</sub> = (<span
+              class="style-info"
+              >S</span
+            ><sub>(&deg;F)</sub> - 32 ) X 5/9
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
